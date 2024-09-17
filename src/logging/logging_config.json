@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "formatters": {
+    "json": {
+      "()": "src.logging.logging_extensions.MyJSONFormatter",
+      "fmt_keys": {
+        "message": "message",
+        "timestamp": "timestamp"
+      }
+    }
+  },
+  "filters": {
+    "main_info": {
+      "()": "src.logging.logging_extensions.MainInfoFilter"
+    },
+    "other_info": {
+      "()": "src.logging.logging_extensions.OtherInfoFilter"
+    },
+    "errors": {
+      "()": "src.logging.logging_extensions.ErrorFilter"
+    }
+  },
+  "handlers": {
+    "main_info_json": {
+      "class": "src.logging.logging_extensions.MyTimedRotatingFileHandler",
+      "formatter": "json",
+      "filename": "logs/main_info/log.jsonl",
+      "backupCount": 3,
+      "when": "midnight",
+      "interval": 1,
+      "utc": true,
+      "filters": ["main_info"]
+    },
+    "other_info_json": {
+      "class": "src.logging.logging_extensions.MyTimedRotatingFileHandler",
+      "formatter": "json",
+      "filename": "logs/other_info/log.jsonl",
+      "backupCount": 3,
+      "when": "midnight",
+      "interval": 1,
+      "utc": true,
+      "filters": ["other_info"]
+    },
+    "errors_json": {
+      "class": "src.logging.logging_extensions.MyTimedRotatingFileHandler",
+      "formatter": "json",
+      "filename": "logs/errors/log.jsonl",
+      "backupCount": 3,
+      "when": "midnight",
+      "interval": 1,
+      "utc": true,
+      "filters": ["errors"]
+    },
+    "queue_handler": {
+      "class": "logging.handlers.QueueHandler",
+      "handlers": [
+        "main_info_json",
+        "other_info_json",
+        "errors_json"
+      ],
+      "respect_handler_level": true
+    }
+  },
+  "loggers": {
+    "root": {
+      "level": "INFO",
+      "handlers": [
+        "queue_handler"
+      ]
+    }
+  }
+}

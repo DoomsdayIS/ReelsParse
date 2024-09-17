@@ -1,0 +1,22 @@
+{"message": "Calling GoogleSpreadSheets.__init__", "timestamp": "2024-09-17T17:51:45.776912+00:00"}
+{"message": "Successfully got worksheets", "timestamp": "2024-09-17T17:51:48.342785+00:00"}
+{"message": "Finished calling GoogleSpreadSheets.__init__", "timestamp": "2024-09-17T17:51:48.342785+00:00"}
+{"message": "Calling ReelsParser.parse_reels", "timestamp": "2024-09-17T17:51:48.342785+00:00"}
+{"message": "Finished calling ReelsParser.parse_reels", "timestamp": "2024-09-17T17:51:48.342785+00:00"}
+{"message": "Calling GoogleSpreadSheets.get_reels_urls", "timestamp": "2024-09-17T17:51:48.343791+00:00"}
+{"message": "Getting urls from the worksheet: Полки", "timestamp": "2024-09-17T17:51:49.038010+00:00"}
+{"message": "Getting urls from the worksheet: Магнитный держатель", "timestamp": "2024-09-17T17:51:49.700854+00:00"}
+{"message": "Getting urls from the worksheet: Бортики", "timestamp": "2024-09-17T17:51:50.177873+00:00"}
+{"message": "Getting urls from the worksheet: Крючки", "timestamp": "2024-09-17T17:51:50.635826+00:00"}
+{"message": "Getting urls from the worksheet: Корзины для хранения ", "timestamp": "2024-09-17T17:51:51.358575+00:00"}
+{"message": "Getting urls from the worksheet: Чехол", "timestamp": "2024-09-17T17:51:52.038876+00:00"}
+{"message": "Skipping worksheet: СВОД. Incorrect column names", "timestamp": "2024-09-17T17:51:52.799984+00:00"}
+{"message": "Skipping worksheet: Списки. Incorrect column names", "timestamp": "2024-09-17T17:51:53.523342+00:00"}
+{"message": "Skipping worksheet: СВОД обсуждение. Incorrect column names", "timestamp": "2024-09-17T17:51:54.265226+00:00"}
+{"message": "Skipping worksheet: Изменения по дням. Incorrect column names", "timestamp": "2024-09-17T17:51:54.987254+00:00"}
+{"message": "Finished calling GoogleSpreadSheets.get_reels_urls", "timestamp": "2024-09-17T17:51:54.987254+00:00"}
+{"message": "Working to get views from urls of the media: <class 'src.social_media.youtube.youtube.Youtube'> using API <class 'src.social_media.youtube.youtube_api.YtAPI'>", "timestamp": "2024-09-17T17:51:54.987254+00:00"}
+{"message": "Ended work with media: <class 'src.social_media.youtube.youtube.Youtube'>", "timestamp": "2024-09-17T17:52:12.370363+00:00"}
+{"message": "Calling GoogleSpreadSheets.update_reels_views", "timestamp": "2024-09-17T17:52:12.370363+00:00"}
+{"message": "Updated rows 10", "timestamp": "2024-09-17T17:52:43.184371+00:00"}
+{"message": "Finished calling GoogleSpreadSheets.update_reels_views", "timestamp": "2024-09-17T17:52:43.184371+00:00"}
